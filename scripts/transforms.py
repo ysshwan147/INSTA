@@ -43,7 +43,7 @@ def dump_text(path, params):
 
 def dump_flame(flame, frame_id, output):
     # params = ['exp', 'tex', 'sh', 'eyes', 'jaw']
-    params = ['exp']
+    params = ['exp', 'eyelids', 'eyes', 'jaw', 'shape']
     for param in params:
         coeff = flame[param]
         coeff = coeff[0].flatten('F')
@@ -52,7 +52,7 @@ def dump_flame(flame, frame_id, output):
 
 def dump_intrinsics(frame):
     data = {}
-    payload = torch.load(frame)
+    payload = torch.load(frame, weights_only=False)
 
     # Intrinsic
     h = payload['img_size'][0]
