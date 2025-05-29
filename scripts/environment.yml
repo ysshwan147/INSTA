@@ -125,7 +125,7 @@ dependencies:
       - asttokens==2.0.5
       - async-timeout==4.0.2
       - attrs==22.1.0
-      # - av==8.0.3
+      - av==14.4.0
       - babel==2.10.3
       - backcall==0.2.0
       - beautifulsoup4==4.11.1
